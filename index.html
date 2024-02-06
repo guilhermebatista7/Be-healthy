@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be healthy</title>
+    <link rel="shortcut icon" href="images/icon-be-helthy.png" type="image/x-icon">
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+    <header>
+        <h1>Be <br> healthy</h1>
+    </header>
+    <section id="introduction">
+        <img src="images/icon-be-helthy.png" alt="company´s image">
+        <p id="introduction_p">Hello, welcome to Be Healthy. We are a company that provides services in order to make people´s life healthier. </p>
+    </section>
+    <nav>
+        <a href="">About us</a>
+        <a href="">Healthy recipes</a>
+        <a href="">Plans</a>
+    </nav>
+    <h3 id="freeTry">Try a totally free service from us!</h2>
+    <section id="bmi">
+        <h2>B.M.I</h2>
+        <h4>Check your B.M.I(body mass index) and verify your ideal weight </h3>
+        <label for="iweight">Weight: </label>
+        <input type="number" name="weight" id="iweight" class="elements" placeholder="Type your weight in Kilograms ex:(65.5)" oninput="limitInputLength(this)" maxlength="4"><br>
+        <label for="iheight">Height: </label>
+        <input type="number" name="height" id="iheight" class="elements" placeholder="Type your heigh in meters ex:(1.79)" oninput="limitInputLength(this)" maxlength="4">
+        <input type="button" value="Check" onclick="checkBmi()">
+    </section>
+    <footer>
+        <p>Site produced by Guilherme Baista de Souza</p><br>
+        <a href="https://github.com/guilhermebatista7" target="_blank">Git Hub</a>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
