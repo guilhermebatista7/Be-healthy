@@ -4,36 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Be healthy</title>
-    <link rel="shortcut icon" href="images/icon-be-helthy.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/icon-be-healthy.png" type="image/x-icon">
     <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
-    <header>
-        <h1>Be <br> healthy</h1>
-    </header>
-    <section id="introduction">
-        <img src="images/icon-be-helthy.png" alt="company´s image">
-        <p id="introduction_p">Hello, welcome to Be Healthy. We are a company that provides services in order to make people´s life healthier. </p>
-    </section>
-    <nav>
-        <a href="">About us</a>
-        <a href="">Healthy recipes</a>
-        <a href="">Plans</a>
-    </nav>
-    <h3 id="freeTry">Try a totally free service from us!</h2>
-    <section id="bmi">
-        <h2>B.M.I</h2>
-        <h4>Check your B.M.I(body mass index) and verify your ideal weight </h3>
-        <label for="iweight">Weight: </label>
-        <input type="number" name="weight" id="iweight" class="elements" placeholder="Type your weight in Kilograms ex:(65.5)" oninput="limitInputLength(this)" maxlength="4"><br>
-        <label for="iheight">Height: </label>
-        <input type="number" name="height" id="iheight" class="elements" placeholder="Type your heigh in meters ex:(1.79)" oninput="limitInputLength(this)" maxlength="4">
-        <input type="button" value="Check" onclick="checkBmi()">
-    </section>
-    <footer>
-        <p>Site produced by Guilherme Baista de Souza</p><br>
-        <a href="https://github.com/guilhermebatista7" target="_blank">Git Hub</a>
-    </footer>
+    <main>
+        <header>
+            <h1>Be <br> healthy</h1>
+        </header>
+        <section id="introduction">
+            <img src="images/icon-be-healthy.png" alt="company´s image">
+            <p id="introduction_p">Hello, welcome to Be Healthy. We are a company that provides services in order to make people´s life healthier. </p>
+        </section>
+        <nav>
+            <button onclick="home()">Home</button>
+            <button onclick="aboutUs()">About us</button>
+            <button onclick="contact()">Contact</button>
+        </nav>
+        <h3 id="freeTry">Try a totally free service from us!</h3>
+        <section id="about-us" class="options_menu">
+                <p>
+                    <span>Mission Statement:</span>
+                    "At Be Healthy, we're committed to empowering individualsto live healthier and happier lives through tailored diet and exercise programs."<br>
+                </p>
+                <p>
+                    <span>Company Overview:</span>
+                    Be Healthy is a leading health and fitness company dedicated to helping individuals achieve their wellness goals.
+                    We offer personalized diet plans, exercise routines, and weightlifting programs tailored to each client's unique needs.
+                </p>
+                <p>
+                    <span>Team:</span>
+                     "Our team is made up of passionate health and fitness experts dedicated to helping you every step of the way. Combining expert knowledge and practical experience, we're here to help you achieve your health goals."
+                </p>
+        </section>
+        <section id="contact" class="options_menu">
+            <div>
+                <h2>Phone number:</h2>
+                <p>+1 (555) 123-4567</p>
+            </div>
+            <div>
+                <h2>Email:</h2>
+                <p>info@example.com</p>
+            </div>
+            <div>
+                <h2>Adress:</h2>
+                <p>23 Main Street, City, State</p>
+                    </section>
+            </div>
+        <section id="bmi" class="options_menu">
+            <h2>B.M.I</h2>
+            <div id="data">
+                <h4>Check your B.M.I(body mass index) and verify your ideal weight </h3>
+                <label for="iweight">Weight: </label>
+                <input type="number" name="weight" id="iweight" class="elements" placeholder="Type your weight in Kilograms ex:(65.5)" oninput="limitInputLength(this)" maxlength="4"><br>
+                <label for="iheight">Height: </label>
+                <input type="number" name="height" id="iheight" class="elements" placeholder="Type your heigh in meters ex:(1.79)" oninput="limitInputLength(this)" maxlength="4">
+                <input type="button" id="button_check" value="Check" onclick="checkBmi()">
+            </div>
+            <div id="res"></div>
+            <p id="bmi_p">Become a member of our service and guarantee your quality of life!</p>
+        </section>
+        <div id="thank">
+            <p>Thank you for considering Be Healthy as your partner in your health and fitness journey. Together, let's strive for a healthier and happier future!</p></div>
+        <footer>
+            <p>Site produced by Guilherme Baista de Souza</p><br>
+            <a href="https://github.com/guilhermebatista7" target="_blank">Git Hub</a>
+        </footer>
+    </main>
 
     <script src="index.js"></script>
 </body>

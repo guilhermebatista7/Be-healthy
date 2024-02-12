@@ -52,14 +52,23 @@ table {
     box-sizing: border-box;
 }
 
+
+
 body, html{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 body {
     background-color: rgba(128, 128, 128, 0.523);
+}
+
+main {
+    background-color: rgba(128, 128, 128, 0.523);
+    max-width: 800px;
+    margin: auto;
 }
 
 header{
@@ -86,7 +95,8 @@ header > h1{
 
 #introduction{
     margin: auto;
-    width: 90vw;
+    width: 85vw;
+    max-width: 650px;
     padding: 5px;
     text-align: center;
     background-color: #ffffff56;
@@ -99,8 +109,10 @@ header > h1{
 #introduction img{
     position: relative;
     top: 5px;
-    width: 28px;
-    height: 28px;
+    width: 10vw;
+    height: 4vh;
+    max-width: 28px;
+    max-height: 28px;
 }
 
 #introduction_p{
@@ -114,17 +126,20 @@ nav{
     justify-content: space-around;
     position: relative;
     width: 80vw;
+    max-width: 650px;
     margin: 10px auto 10px auto;
     
 }
 
-nav > a{
+nav > button{
     background-color: #2DA1BC;
-    width: 100px;
+    width: 90px;
     height: 50px;
+    font-size: 14px;
     border-radius: 10px;
     padding: 10px;
     color: white;
+    border: 1px solid #ebebeb;
     text-decoration: none;
     position: relative;
     text-align: center;
@@ -133,30 +148,23 @@ nav > a{
     justify-content: center;
 }
 
-a:hover {
+nav > button:hover {
     box-shadow: 0px 0px 10px #84D0E5;
     scale: 1.05;
     transition-duration: 0.5s;
+    cursor: pointer;
 }
 
-#freeTry {
-    font-size: 20px;
-    margin-top: 30px;
-    text-align: center;
-    color: #f2ec39;
-    text-shadow: 0px 0px 3px black ;
-    background-color: #a7a7a6;
-    padding: 10px;
-}
 
-#bmi {
-    border: 1px solid #D80C20;
-    background-color: #d80c20b5;
-    border-radius: 10px;
+.options_menu{
+    border: 1px solid #58C1D8;
+    background-color: rgba(0, 0, 0, 0.34);
+    border-radius: 15px;
     width: 80vw;
+    max-width: 680px;
     margin: auto;
     margin-top: 40px;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -165,21 +173,162 @@ a:hover {
     position: relative;
 }
 
+#about-us{
+    display: none;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+}
+
+#about-us span{
+    color: white;
+    font-size: 18px;
+}
+
+#about-us p{
+    margin-bottom: 8px;
+}
+
+#contact{
+    display: none;
+}
+
+#contact > div{
+    display: flex;
+    margin: 10px;
+    width: 90%;
+}
+
+#contact > div > h2{
+    width: 40%;
+    color: white;
+    margin-right: 3px;
+    text-shadow: 1px 1px 2px black;
+}
+
+#contact > div p{
+    width: 50%;
+}
+
+#freeTry {
+    font-size: 20px;
+    margin-top: 30px;
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 0px 0px 3px black ;
+    background-color: #a2a2a0;
+    padding: 10px;
+}
+
 #bmi h2 {
-    background-color: #C30C27;
+    background-color: #58C1D8;
     color: white;
     padding: 10px;
     border-radius: 10px;
     position: absolute;
     top: -20px;
-    box-shadow: 0px 0px 6px rgb(231, 24, 24);
+    box-shadow: 0px 0px 6px #6fd5eb;
+}
+
+#bmi #data{
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #bmi h4 {
     margin: 10px;
+    margin-bottom: 35px;
 }
 
 #bmi input {
     width: 260px;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #58C1D8;
 }
 
+#bmi #button_check {
+    width: 70px;
+    height: 30px;
+    padding: 6px;
+    margin-top: 8px;
+    border-radius: 12px;
+    border: 1px solid white;
+    background-color: rgba(128, 128, 128, 0.542);
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bmi #button_check:hover{
+    scale: 1.05;
+    transition-duration: 0.3s;
+    box-shadow: 0px 0px 2px white;
+    cursor: pointer;
+}
+
+#bmi #res {
+    display: none;
+    line-height: 20px;
+    background-color: #58c1d877;
+    border-radius: 15px;
+    margin: 10px 10px ;
+}
+
+#bmi_p{
+    font-size: 18px;
+    margin-top: 5px;
+    display: none;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+
+#thank{
+    width: 80vw;
+    max-width: 660px;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 17px;
+    padding: 7px;
+    background-color: rgb(222, 222, 222);
+    border: 3px solid yellow;
+    border-radius: 10px;
+}
+
+footer{
+    background-color: #8c8c8b;
+    padding: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 20px;
+}
+
+footer > a{
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.499);
+    padding: 5px;
+    color: white;
+    border-radius: 10px;
+}
+
+footer > a:hover {
+    scale: 1.1;
+    box-shadow: 0px 0px 5px white;
+    transition-duration: 0.5s;
+}
